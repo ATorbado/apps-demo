@@ -1,6 +1,6 @@
 # Apps demo
 
-Colección pública de ocho aplicaciones de demostración: siete proyectos Flutter y una aplicación Java. Los datos operativos, identidades, matrículas y registros incluidos son sintéticos.
+Colección pública de nueve aplicaciones de demostración: siete proyectos Flutter, una aplicación Java y una web Next.js. Los datos operativos, identidades, matrículas y registros incluidos son sintéticos.
 
 ## Aplicaciones y manuales
 
@@ -14,6 +14,7 @@ Colección pública de ocho aplicaciones de demostración: siete proyectos Flutt
 | Nieve Java | Crear una vista previa local ficticia | [Abrir manual](apps/nieve_java/README.md) |
 | Nieve Vial | Crear, revisar y simular el envío de partes | [Abrir manual](apps/nieve_vial/README.md) |
 | Nieve Vial Vuelta | Revisar partes y gestionar cupos y stock | [Abrir manual](apps/nieve_vial_vuelta/README.md) |
+| ThreadCare Lab | Consultar cuidados de tejidos y resolver manchas | [Abrir manual](apps/threadcare_lab/README.md) |
 
 ## Inicio rápido de una app Flutter
 

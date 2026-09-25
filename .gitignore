@@ -10,6 +10,10 @@
 **/ephemeral/
 **/Pods/
 **/DerivedData/
+**/node_modules/
+**/.next/
+**/out/
+**/.sites-runtime/
 **/*.iml
 **/.flutter-plugins
 **/.flutter-plugins-dependencies
