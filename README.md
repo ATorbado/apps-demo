@@ -1,19 +1,17 @@
 # Apps demo
 
-Colección pública de catorce demostraciones: aplicaciones Flutter, Android, Java, PHP y Next.js, una canalización de datos y una muestra de política firmada. Los datos operativos, identidades, matrículas y registros incluidos son sintéticos o proceden de fuentes públicas indicadas.
+Colección pública de once proyectos con recorrido de demostración y dos proyectos inhabilitados temporalmente. Incluye aplicaciones Flutter, Android, Java y Next.js, y una canalización de datos. Los datos operativos, identidades, matrículas y registros incluidos son sintéticos o proceden de fuentes públicas indicadas.
 
 ## Estructura del repositorio
 
-El repositorio contiene catorce demostraciones en `apps/`, junto con este archivo README, SECURITY.md y LICENSE.
+El repositorio contiene once demos disponibles en `apps/` y dos proyectos pendientes en `apps/inhabilitadas_temporalmente/`, junto con este archivo README, SECURITY.md y LICENSE. GitHub muestra el código y los manuales; no ejecuta aquí las apps móviles, de escritorio ni los scripts.
 
-## Aplicaciones y manuales
+## Demos disponibles y manuales
 
 | Aplicación | Uso principal | Manual |
 | --- | --- | --- |
 | Agenda Estado | Registrar incidencias y adjuntar fotos | [Abrir manual](apps/agenda_estado/README.md) |
-| AguacatePP Policy | Inspeccionar una muestra de política firmada | [Abrir manual](apps/aguacatepp_policy/README.md) |
 | Animales | Simular un parte de animal en carretera | [Abrir manual](apps/animalesapp/README.md) |
-| HEALEXY | Registrar alimentos y estimar macronutrientes | [Abrir manual](apps/healexy/README.md) |
 | Inspecciones | Recorrer una inspección de seguridad | [Abrir manual](apps/inspecciones/README.md) |
 | León Radares | Generar feeds públicos de tráfico y radares | [Abrir manual](apps/leon_radares/README.md) |
 | Maquinaria M | Consultar vehículos y anotar mantenimientos | [Abrir manual](apps/maquinaria_m/README.md) |
@@ -23,7 +21,15 @@ El repositorio contiene catorce demostraciones en `apps/`, junto con este archiv
 | Nieve Vial Vuelta | Revisar partes y gestionar cupos y stock | [Abrir manual](apps/nieve_vial_vuelta/README.md) |
 | notALES | Crear notas locales y mostrarlas en un widget | [Abrir manual](apps/notales/README.md) |
 | ThreadCare Lab | Consultar cuidados de tejidos y resolver manchas | [Abrir manual](apps/threadcare_lab/README.md) |
-| WidgetTime | Consultar el tiempo y usar un widget Android | [Abrir manual](apps/widget_time/README.md) |
+
+## Inhabilitadas temporalmente
+
+Estas copias se conservan para reparación; su función principal no está disponible en modo demo sin infraestructura o claves nuevas. Consulta también el [estado de la carpeta](apps/inhabilitadas_temporalmente/README.md).
+
+| Proyecto | Motivo | Manual |
+| --- | --- | --- |
+| HEALEXY | Falta el esquema MySQL; no se ha verificado registro ni cálculo | [Abrir manual](apps/inhabilitadas_temporalmente/healexy/README.md) |
+| WidgetTime | Compila, pero el tiempo y el widget necesitan claves de servicios externos | [Abrir manual](apps/inhabilitadas_temporalmente/widget_time/README.md) |
 
 ## Inicio rápido
 

@@ -2,6 +2,8 @@
 
 Aplicación Android en Kotlin para consultar el tiempo de Gijón y mostrar un widget meteorológico.
 
+**Estado: inhabilitada temporalmente como demo.** La app compila, pero la consulta del tiempo necesita claves nuevas de servicios externos; sin ellas no se cumple el recorrido principal.
+
 ## Configurar claves
 
 Las claves ya no están escritas en el código. Defínelas como variables de entorno o propiedades Gradle locales:

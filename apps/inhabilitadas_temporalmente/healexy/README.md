@@ -2,6 +2,8 @@
 
 Aplicación web PHP heredada para registrar alimentos, peso y estimaciones de macronutrientes.
 
+**Estado: inhabilitada temporalmente como demo.** Falta el esquema MySQL; el registro y los cálculos no se han podido verificar. No es una web ejecutable desde GitHub.
+
 ## Requisitos
 
 - PHP con la extensión `mysqli`.
