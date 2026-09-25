@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:id="@+id/Desliz"
+    android:alpha="0.8"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/idRLMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:viewBindingIgnore="true">
+
+
+        <TextView
+            android:id="@+id/IDCiudad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:text="@string/IDCiudad"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="35dp" />
+
+        <TextView
+            android:id="@+id/IDTemperatura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/IDCiudad"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="20"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="80dp" />
+
+        <ImageView
+            android:id="@+id/IDImagenTMP"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_below="@+id/IDTemperatura"
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/IDCielo"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/IDImagenTMP"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="2dp"
+            android:padding="6dp"
+            android:text="Nublado"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/IDpm10TXT"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/IDo3TXT"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_toEndOf="@+id/IDo3"
+            android:padding="6dp"
+            android:text="40"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/IDo3TXT"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/IDso2TXT"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="30dp"
+            android:layout_toEndOf="@+id/IDo3"
+            android:padding="6dp"
+            android:text="2"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/IDso2TXT"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/IDo3"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="30dp"
+            android:layout_toEndOf="@+id/IDso2"
+            android:padding="6dp"
+            android:text="4"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/IDpm10"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/IDTemperatura"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/IDImagenTMP"
+            android:padding="6dp"
+            android:text="PM10:"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/IDo3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/IDpm10"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/IDImagenTMP"
+            android:padding="6dp"
+            android:text="O3:"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/IDso2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/IDo3"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="30dp"
+            android:layout_toEndOf="@+id/IDImagenTMP"
+            android:padding="6dp"
+            android:text="SO2:"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/IDTextoEstatico1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/IDCielo"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:text="@string/IDTextoEstatico1"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/IDLateralDatos"
+            android:layout_width="400dp"
+            android:layout_height="235dp"
+            android:layout_below="@id/IDTextoEstatico1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/vista_scroll_rv" />
+
+
+    </RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

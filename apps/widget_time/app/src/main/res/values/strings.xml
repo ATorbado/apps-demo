@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name" translatable="false">WidgTime</string>
+    <string name="configure">¿De que lugar deseas saber el tiempo?</string>
+    <string name="add_widget">Añadir widget</string>
+    <string name="app_widget_description">Descripción del widget de la app</string>
+    <string name="IDCiudad">"Ciudad de "</string>
+    <string name="IDTextoEstatico1">Predicción para las proximas horas:</string>
+    <string name="humedad">% Humedad</string>
+    <string name="NonRLYText1">DÍA</string>
+    <string name="NonRLYText3">LLUVIA</string>
+    <string name="dia">"Día "</string>
+    <string name="lluvia">% lluvia</string>
+    <string name="default_notificationchannel_id" translatable="false">canal1</string>
+    <string name="txtNoti1">La temperatura es de</string>
+    <string name="txtNoti2">" con un indice de precipitaciones del"</string>
+</resources>

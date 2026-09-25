@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="130dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="1dp"
+    android:background="@color/purple_700"
+    >
+
+    <GridLayout
+        android:rowCount="8"
+        android:columnCount="1"
+        android:textAlignment="center"
+        tools:viewBindingIgnore="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangulo_contenedor"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/IDhora"
+            android:text="12:00"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:padding="2dp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/IDtemp_c"
+            android:text="5432.1°C"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/IDhora"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:padding="2dp"
+            android:textColor="@color/white"
+            />
+
+        <ImageView
+            android:id="@+id/IDcondition_icon"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:layout_below="@+id/IDtemp_c"
+            android:layout_centerHorizontal="true"
+            android:padding="2dp"
+            android:textColor="@color/white"
+            />
+
+
+        <TextView
+            android:id="@+id/IDcondition_text"
+            android:text="nlinmkoty"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/IDcondition_icon"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:padding="2dp"
+            android:textColor="@color/white" />
+
+
+        <TextView
+            android:id="@+id/IDlluvia"
+            android:text="@string/lluvia"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/IDcondition_text"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:padding="2dp"
+            android:textColor="@color/white" />
+
+
+        <TextView
+            android:id="@+id/IDhumidity"
+            android:text="@string/humedad"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/IDlluvia"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:padding="2dp"
+            android:textColor="@color/white" />
+
+
+        <TextView
+            android:id="@+id/IDuv"
+            android:text="55uv"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/IDhumidity"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:padding="2dp"
+            android:textColor="@color/white" />
+
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="1"
+        android:columnCount="2">
+
+        <TextView
+            android:id="@+id/IDwind_kph"
+            android:text="32.1km/h"
+            android:textSize="19dp"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/IDuv"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:layout_marginLeft="1dp"
+            android:padding="2dp"
+            android:textColor="@color/white" />
+
+
+        <ImageView
+            android:id="@+id/IDwind_dirIMG"
+            android:layout_width="38dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/IDwind_kph"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/IDwind_dir"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:text="S"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:srcCompat="@drawable/brujula" />
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rowCount="1"
+            android:columnCount="2">
+
+            <TextView
+                android:id="@+id/IDwind_dir"
+                android:text="ESE"
+                android:textSize="20dp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/IDwind_kph"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:padding="2dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/IDwind_dirGrades"
+                android:text="175.5º"
+                android:textSize="20dp"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/IDwind_kph"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:padding="2dp"
+                android:textColor="@color/white" />
+
+        </GridLayout>
+
+
+    </GridLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

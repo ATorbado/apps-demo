@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="configure">Where will you know weather forecast?</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="IDCiudad">"City: "</string>
+    <string name="IDTextoEstatico1">Forecast for the next hours:</string>
+    <string name="humedad">% humidity</string>
+    <string name="NonRLYText1">DAY</string>
+    <string name="NonRLYText3">RAIN</string>
+    <string name="dia">"Day "</string>
+    <string name="lluvia">% rain</string>
+    <string name="txtNoti1">"The temperature is "</string>
+    <string name="txtNoti2">" with a rainfall drains of "</string>
+</resources>

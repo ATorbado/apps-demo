@@ -1,24 +1,29 @@
 # Apps demo
 
-Colección pública de nueve aplicaciones de demostración: siete proyectos Flutter, una aplicación Java y una web Next.js. Los datos operativos, identidades, matrículas y registros incluidos son sintéticos.
+Colección pública de catorce demostraciones: aplicaciones Flutter, Android, Java, PHP y Next.js, una canalización de datos y una muestra de política firmada. Los datos operativos, identidades, matrículas y registros incluidos son sintéticos o proceden de fuentes públicas indicadas.
 
 ## Estructura del repositorio
 
-El repositorio contiene nueve aplicaciones en `apps/`, junto con este archivo README, SECURITY.md y LICENSE.
+El repositorio contiene catorce demostraciones en `apps/`, junto con este archivo README, SECURITY.md y LICENSE.
 
 ## Aplicaciones y manuales
 
 | Aplicación | Uso principal | Manual |
 | --- | --- | --- |
 | Agenda Estado | Registrar incidencias y adjuntar fotos | [Abrir manual](apps/agenda_estado/README.md) |
+| AguacatePP Policy | Inspeccionar una muestra de política firmada | [Abrir manual](apps/aguacatepp_policy/README.md) |
 | Animales | Simular un parte de animal en carretera | [Abrir manual](apps/animalesapp/README.md) |
+| HEALEXY | Registrar alimentos y estimar macronutrientes | [Abrir manual](apps/healexy/README.md) |
 | Inspecciones | Recorrer una inspección de seguridad | [Abrir manual](apps/inspecciones/README.md) |
+| León Radares | Generar feeds públicos de tráfico y radares | [Abrir manual](apps/leon_radares/README.md) |
 | Maquinaria M | Consultar vehículos y anotar mantenimientos | [Abrir manual](apps/maquinaria_m/README.md) |
 | Mi Diario | Diario personal local con recordatorios y copias | [Abrir manual](apps/mi_diario/README.md) |
 | Nieve Java | Crear una vista previa local ficticia | [Abrir manual](apps/nieve_java/README.md) |
 | Nieve Vial | Crear, revisar y simular el envío de partes | [Abrir manual](apps/nieve_vial/README.md) |
 | Nieve Vial Vuelta | Revisar partes y gestionar cupos y stock | [Abrir manual](apps/nieve_vial_vuelta/README.md) |
+| notALES | Crear notas locales y mostrarlas en un widget | [Abrir manual](apps/notales/README.md) |
 | ThreadCare Lab | Consultar cuidados de tejidos y resolver manchas | [Abrir manual](apps/threadcare_lab/README.md) |
+| WidgetTime | Consultar el tiempo y usar un widget Android | [Abrir manual](apps/widget_time/README.md) |
 
 ## Inicio rápido
 
@@ -49,7 +54,8 @@ Las apps que admiten integración remota usan `DEMO_MODE=true` de forma predeter
 
 ## Seguridad y datos
 
-- No se versionan archivos `.env`, claves de firma, certificados, bases de datos, copias, APK ni credenciales.
+- No se versionan archivos `.env`, claves de firma, certificados privados, bases de datos, copias, APK ni credenciales.
+- HEALEXY y WidgetTime usan variables de entorno para sus credenciales locales; las credenciales incrustadas en los repositorios originales no se copiaron.
 - Los valores `DEMO-*`, `Persona de ejemplo`, `Responsable 1/2` y similares son ficticios.
 - `Mi Diario` guarda el contenido que escriba el usuario en el dispositivo y sus copias JSON pueden contener información personal.
 - `Agenda Estado` puede pedir ubicación y consultar el servicio público CartoCiudad al pulsar **Obtener coordenadas**.
