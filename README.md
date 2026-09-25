@@ -2,6 +2,10 @@
 
 Colección pública de nueve aplicaciones de demostración: siete proyectos Flutter, una aplicación Java y una web Next.js. Los datos operativos, identidades, matrículas y registros incluidos son sintéticos.
 
+## Estructura del repositorio
+
+El repositorio contiene nueve aplicaciones en `apps/`, junto con este archivo README, SECURITY.md y LICENSE.
+
 ## Aplicaciones y manuales
 
 | Aplicación | Uso principal | Manual |
@@ -16,12 +20,29 @@ Colección pública de nueve aplicaciones de demostración: siete proyectos Flut
 | Nieve Vial Vuelta | Revisar partes y gestionar cupos y stock | [Abrir manual](apps/nieve_vial_vuelta/README.md) |
 | ThreadCare Lab | Consultar cuidados de tejidos y resolver manchas | [Abrir manual](apps/threadcare_lab/README.md) |
 
-## Inicio rápido de una app Flutter
+## Inicio rápido
+
+### Flutter
 
 ```powershell
 cd apps\agenda_estado
 flutter pub get
 flutter run
+```
+
+### Java
+
+```powershell
+cd apps\nieve_java
+.\mvnw.cmd javafx:run
+```
+
+### ThreadCare Lab (Next.js)
+
+```powershell
+cd apps\threadcare_lab
+npm install
+npm run dev
 ```
 
 Las apps que admiten integración remota usan `DEMO_MODE=true` de forma predeterminada. En ese modo no necesitan credenciales ni contactan con la infraestructura privada original. Consulta el manual de cada app antes de introducir datos.
