@@ -1,16 +1,46 @@
-# maquinaria_m
+# Maquinaria M — manual de uso
 
-A new Flutter project.
+Demo Flutter para consultar vehículos, revisar su historial y añadir registros de mantenimiento.
 
-## Getting Started
+## Ejecutar
 
-This project is a starting point for a Flutter application.
+```powershell
+flutter pub get
+flutter run
+```
 
-A few resources to get you started if this is your first Flutter project:
+`DEMO_MODE` está activado por defecto. La app carga dos vehículos ficticios y no realiza peticiones de red.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Recorrido de trabajo
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Busca por matrícula o nombre del vehículo.
+2. Abre una tarjeta para ver tipos de mantenimiento e historial.
+3. Pulsa un tipo, por ejemplo **Cambio de aceite** o **Revisión de neumático**.
+4. Completa fecha, posición cuando sea necesaria, kilómetros, marca/modelo y observaciones.
+5. Pulsa **Guardar mantenimiento** y comprueba el nuevo registro en el historial.
+
+## Datos y límites de la demo
+
+- Vehículos y matrículas usan valores `DEMO-*`.
+- Los registros nuevos solo se guardan en memoria; se pierden al reiniciar la app.
+- El botón de recarga restaura la vista desde ese estado temporal.
+- No introduzcas matrículas, averías ni detalles de mantenimiento reales.
+
+## Verificación
+
+```powershell
+flutter analyze
+flutter test
+```
+
+## Integración propia
+
+Para conectar tu backend HTTPS:
+
+```powershell
+flutter run `
+  --dart-define=DEMO_MODE=false `
+  --dart-define=MAQUINARIA_BACKEND_URL=https://servidor.example
+```
+
+El backend debe implementar los recursos de vehículos, tipos, posiciones e historial esperados por `lib/services/maquinaria_api.dart`.

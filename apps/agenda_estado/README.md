@@ -1,66 +1,51 @@
-# Agenda Estado
+# Agenda Estado — manual de uso
 
-Aplicación Flutter para registrar incidencias, adjuntar fotografías y
-reenviar formularios pendientes cuando vuelve la conectividad.
+Demo Flutter para registrar una incidencia de carretera, calcular su posición, adjuntar hasta dos fotografías y simular el envío.
 
-## Configuración local
+## Ejecutar
 
-La URL y la credencial del backend no se guardan en el repositorio. Para una
-compilación privada:
-
-```powershell
-flutter run `
-  --dart-define=AGENDA_BACKEND_URL=https://servidor.example/submit `
-  --dart-define=AGENDA_API_TOKEN=credencial-temporal
-```
-
-La URL debe usar HTTPS. Si falta algún valor, la aplicación muestra
-`Configuración pendiente` y no abre el formulario.
-
-`--dart-define` evita publicar la credencial en el código fuente, pero no la
-convierte en un secreto: puede recuperarse de una aplicación compilada. Antes
-de distribuir la app, el backend debe usar autenticación por usuario/dispositivo
-y credenciales de corta duración. También debe revocarse la credencial que
-estuvo incluida en versiones anteriores.
-
-## Verificación local
+Requiere Flutter compatible con el rango de Dart de `pubspec.yaml`.
 
 ```powershell
 flutter pub get
+flutter run
+```
+
+`DEMO_MODE` está activado por defecto: no necesitas URL ni credencial y el envío se confirma localmente.
+
+## Recorrido de trabajo
+
+1. Elige la fecha, identificador, carretera, calzada y margen.
+2. Selecciona tipo, causa y subelemento; añade comentarios si son necesarios.
+3. Completa las fechas y horas de conocimiento y actuación.
+4. Pulsa **Obtener coordenadas** para usar la ubicación del dispositivo y calcular el PK.
+5. Añade cero, una o dos fotos y pulsa **Enviar**.
+6. Revisa el resumen final; en demo no se envía nada a un backend.
+
+El interruptor **Modo grande** aumenta el tamaño de texto y controles.
+
+## Ubicación, fotos y datos pendientes
+
+Al pulsar **Obtener coordenadas**, la app solicita permiso de ubicación y consulta el servicio público CartoCiudad para resolver el punto kilométrico. No uses ubicaciones reales si solo estás probando la demo.
+
+En modo real, si un fallo reintentable impide el envío, los campos y una copia de las fotos quedan cifrados en el almacenamiento privado de la app hasta el siguiente intento. La cola tiene límites y recuperación ante corrupción.
+
+## Verificación
+
+```powershell
 flutter analyze
 flutter test
-flutter build apk --debug `
+```
+
+## Integración propia
+
+Desactiva la demo y configura tu servidor HTTPS:
+
+```powershell
+flutter run `
+  --dart-define=DEMO_MODE=false `
   --dart-define=AGENDA_BACKEND_URL=https://servidor.example/submit `
   --dart-define=AGENDA_API_TOKEN=credencial-temporal
 ```
 
-## Datos pendientes
-
-Si el servidor no responde o devuelve un error reintentable, los campos y una
-copia estable de las fotos quedan en el almacenamiento privado de la app. La
-cola limita su tamaño, usa escritura con recuperación y conserva los datos si
-detecta corrupción. Los campos y las fotografías pendientes se cifran con una
-clave aleatoria guardada en el almacén seguro del dispositivo.
-
-## Punto kilométrico
-
-La demostración nunca interpreta un número de portal como PK. Una instalación
-real debe consultar los hitos oficiales desde un proxy HTTPS autenticado en su
-propio backend; así evita exponer infraestructura privada y mantiene un único
-cálculo verificable para todos los móviles.
-
-## Política remota firmada
-
-La aplicación descarga `policy.json` y `policy.sig` desde GitHub y verifica la
-firma Ed25519 antes de confiar en la política.
-
-El campo `ts` es obligatorio, debe estar en UTC y caduca después de
-`ttlDays`. Al llegar esa fecha, la app queda bloqueada incluso con conexión.
-Para renovarla hay que actualizar `ts` y volver a generar `policy.sig` con la
-clave privada original. Cambiar solo el JSON invalida la firma.
-
-## Distribución
-
-El identificador Android sigue siendo `com.example.agenda_estado`. Cambiarlo,
-configurar la firma release, probar en dispositivos reales y publicar requieren
-una decisión explícita del responsable del proyecto.
+No publiques credenciales duraderas dentro de la app. Cambia también el identificador de paquete y la firma antes de distribuir una versión propia.
